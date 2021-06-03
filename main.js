@@ -8,7 +8,13 @@ function handleInput(event) {
   if (!event.key.includes('Arrow') && event.code !== 'Space') return;
 
   if (event.key.includes('Arrow')) rotateCar(event.key);
-  else if (!data.inMotion && event.code === 'Space') setInterval(moveCar, 16);
+  else if (!data.inMotion && event.code === 'Space') {
+    data.intervalID = setInterval(moveCar, 16);
+    data.inMotion = true;
+  } else if (data.inMotion && event.code === 'Space') {
+    clearInterval(data.intervalID);
+    data.inMotion = false;
+  }
 }
 
 function rotateCar(dir) {
