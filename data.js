@@ -6,5 +6,6 @@ var data = {
     x: 0,
     y: 0
   },
-  inMotion: false
+  inMotion: false,
+  intervalID: null
 };
