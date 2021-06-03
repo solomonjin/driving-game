@@ -10,6 +10,7 @@ body {
 .car {
   width: 200px;
   transition: transform 0.25s;
+  position: absolute;
 }
 
 .turn-left {

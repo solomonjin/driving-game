@@ -8,6 +8,7 @@ function handleInput(event) {
   if (!event.key.includes('Arrow') && event.code !== 'Space') return;
 
   if (event.key.includes('Arrow')) rotateCar(event.key);
+  else if (!data.inMotion && event.code === 'Space') setInterval(moveCar, 16);
 }
 
 function rotateCar(dir) {
@@ -23,5 +24,12 @@ function rotateCar(dir) {
   } else {
     $car.className = 'car turn-right';
     data.direction = 'right';
+  }
+}
+
+function moveCar(dir) {
+  if (data.direction === 'right') {
+    data.location.x += 5;
+    $car.style.left = data.location.x + 'px';
   }
 }
