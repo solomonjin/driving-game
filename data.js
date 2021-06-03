@@ -1,9 +1,10 @@
 /* exported data */
 
 var data = {
-  direction: null,
+  direction: 'right',
   location: {
     x: 0,
     y: 0
-  }
+  },
+  inMotion: false
 };
