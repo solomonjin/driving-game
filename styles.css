@@ -9,4 +9,21 @@ body {
 
 .car {
   width: 200px;
+  transition: transform 0.25s;
+}
+
+.turn-left {
+  transform: rotate(180deg);
+}
+
+.turn-right {
+  transform: rotate(0deg);
+}
+
+.turn-north {
+  transform: rotate(-90deg);
+}
+
+.turn-south {
+  transform: rotate(90deg);
 }
