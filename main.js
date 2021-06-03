@@ -37,5 +37,14 @@ function moveCar(dir) {
   if (data.direction === 'right') {
     data.location.x += 5;
     $car.style.left = data.location.x + 'px';
+  } else if (data.direction === 'left') {
+    data.location.x -= 5;
+    $car.style.left = data.location.x + 'px';
+  } else if (data.direction === 'up') {
+    data.location.y -= 5;
+    $car.style.top = data.location.y + 'px';
+  } else if (data.direction === 'down') {
+    data.location.y += 5;
+    $car.style.top = data.location.y + 'px';
   }
 }
