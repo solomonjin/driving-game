@@ -1,3 +1,4 @@
+/* global data */
 
 var $car = document.querySelector('.car');
 
@@ -10,8 +11,17 @@ function handleInput(event) {
 }
 
 function rotateCar(dir) {
-  if (dir.includes('Up')) $car.className = 'car turn-north';
-  else if (dir.includes('Down')) $car.className = 'car turn-south';
-  else if (dir.includes('Left')) $car.className = 'car turn-left';
-  else $car.className = 'car turn-right';
+  if (dir.includes('Up')) {
+    $car.className = 'car turn-north';
+    data.direction = 'up';
+  } else if (dir.includes('Down')) {
+    $car.className = 'car turn-south';
+    data.direction = 'down';
+  } else if (dir.includes('Left')) {
+    $car.className = 'car turn-left';
+    data.direction = 'left';
+  } else {
+    $car.className = 'car turn-right';
+    data.direction = 'right';
+  }
 }
